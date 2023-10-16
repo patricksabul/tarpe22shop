@@ -1,0 +1,12 @@
+G:\Users\K\Desktop\teetch\shopproject\tarpe22\TARpe22ShopVaitmaa\TARpe22Shop.Core\bin\Debug\net6.0\TARpe22Shop.Core.deps.json
+G:\Users\K\Desktop\teetch\shopproject\tarpe22\TARpe22ShopVaitmaa\TARpe22Shop.Core\bin\Debug\net6.0\TARpe22Shop.Core.dll
+G:\Users\K\Desktop\teetch\shopproject\tarpe22\TARpe22ShopVaitmaa\TARpe22Shop.Core\bin\Debug\net6.0\TARpe22Shop.Core.pdb
+G:\Users\K\Desktop\teetch\shopproject\tarpe22\TARpe22ShopVaitmaa\TARpe22Shop.Core\obj\Debug\net6.0\TARpe22Shop.Core.csproj.AssemblyReference.cache
+G:\Users\K\Desktop\teetch\shopproject\tarpe22\TARpe22ShopVaitmaa\TARpe22Shop.Core\obj\Debug\net6.0\TARpe22Shop.Core.GeneratedMSBuildEditorConfig.editorconfig
+G:\Users\K\Desktop\teetch\shopproject\tarpe22\TARpe22ShopVaitmaa\TARpe22Shop.Core\obj\Debug\net6.0\TARpe22Shop.Core.AssemblyInfoInputs.cache
+G:\Users\K\Desktop\teetch\shopproject\tarpe22\TARpe22ShopVaitmaa\TARpe22Shop.Core\obj\Debug\net6.0\TARpe22Shop.Core.AssemblyInfo.cs
+G:\Users\K\Desktop\teetch\shopproject\tarpe22\TARpe22ShopVaitmaa\TARpe22Shop.Core\obj\Debug\net6.0\TARpe22Shop.Core.csproj.CoreCompileInputs.cache
+G:\Users\K\Desktop\teetch\shopproject\tarpe22\TARpe22ShopVaitmaa\TARpe22Shop.Core\obj\Debug\net6.0\TARpe22Shop.Core.dll
+G:\Users\K\Desktop\teetch\shopproject\tarpe22\TARpe22ShopVaitmaa\TARpe22Shop.Core\obj\Debug\net6.0\refint\TARpe22Shop.Core.dll
+G:\Users\K\Desktop\teetch\shopproject\tarpe22\TARpe22ShopVaitmaa\TARpe22Shop.Core\obj\Debug\net6.0\TARpe22Shop.Core.pdb
+G:\Users\K\Desktop\teetch\shopproject\tarpe22\TARpe22ShopVaitmaa\TARpe22Shop.Core\obj\Debug\net6.0\ref\TARpe22Shop.Core.dll
