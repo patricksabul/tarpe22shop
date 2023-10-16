@@ -5,9 +5,9 @@ VisualStudioVersion = 17.5.33627.172
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TARpe22ShopVaitmaa", "TARpe22ShopVaitmaa\TARpe22ShopVaitmaa.csproj", "{CABB7B7B-5BAA-417B-9086-97200623F599}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TARpe22Shop.Data", "TARpe22Shop.Data\TARpe22Shop.Data.csproj", "{AA43C438-A709-473F-8E53-3E37E6D0C92B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TARpe22ShopVaitmaa.Data", "TARpe22Shop.Data\TARpe22ShopVaitmaa.Data.csproj", "{AA43C438-A709-473F-8E53-3E37E6D0C92B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TARpe22Shop.Core", "TARpe22Shop.Core\TARpe22Shop.Core.csproj", "{DA70CE3E-3C02-47A7-8358-CC22D8AB46F1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TARpe22ShopVaitmaa.Core", "TARpe22Shop.Core\TARpe22ShopVaitmaa.Core.csproj", "{DA70CE3E-3C02-47A7-8358-CC22D8AB46F1}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TARpe22ShopVaitmaa.ApplicationServices", "TARpe22Shop.ApplicationServices\TARpe22ShopVaitmaa.ApplicationServices.csproj", "{00CD0BA1-A324-4998-8D98-353BA240B875}"
 EndProject
