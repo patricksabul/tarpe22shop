@@ -20,5 +20,9 @@ namespace TARpe22ShopVaitmaa.Controllers
                     EnginePower = x.EnginePower });
             return View(result);
         }
+        public IActionResult Add()
+        {
+            return View("Edit");
+        }
     }
 }
