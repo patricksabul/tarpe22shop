@@ -1,6 +1,6 @@
 ﻿namespace TARpe22ShopVaitmaa.Models.Spaceship
 {
-    public class SpaceshipEditViewModel
+    public class SpaceshipCreateUpdateViewModel
     {
         public Guid Id { get; set; } //unique id
         public int Price { get; set; } //price of the spaceship

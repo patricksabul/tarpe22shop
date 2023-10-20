@@ -1,4 +1,4 @@
-﻿@model TARpe22ShopVaitmaa.Models.Spaceship.SpaceshipEditViewModel
+﻿@model TARpe22ShopVaitmaa.Models.Spaceship.SpaceshipCreateUpdateViewModel
 @*@if (Model != )
 {
     <h1>Update</h1>
@@ -7,7 +7,7 @@ else
 {
     <h1>Add</h1>
 }*@
-<h1>Add</h1>
+<h1>Create</h1>
 
 <div>
     <form method="post" enctype="multipart/form-data">
@@ -129,8 +129,14 @@ else
                 <input asp-for="Manufacturer" class="form-control" />
             </div>
         </div>
-        <input asp-action="add" asp-controller="spaceships" type="submit" class="btn btn-primary" value="Add" />
-        <input asp-action="update" asp-controller="spaceships" type="submit" class="btn btn-primary" value="Update" />
+        @if (Model.Id.HasValue)
+        {
+            <input asp-action="update" asp-controller="spaceships" type="submit" class="btn btn-primary" value="Update" />
+        }
+        else
+        {
+            <input asp-action="create" asp-controller="spaceships" type="submit" class="btn btn-primary" value="Create" />            
+        }
         <a asp-action="index" asp-controller="spaceships" class="btn btn-primary">Cancel</a>
     </form>
 </div>
