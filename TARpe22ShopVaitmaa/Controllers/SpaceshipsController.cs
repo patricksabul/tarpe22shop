@@ -148,7 +148,7 @@ namespace TARpe22ShopVaitmaa.Controllers
             return RedirectToAction(nameof(Index), vm);
         }
         [HttpPost]
-        public async Task<IActionResult> Delete(Guid id)
+        public async Task<IActionResult> DeleteConfirmation(Guid id)
         {
             var spaceshipId = await _spaceshipsServices.Delete(id);
             if (spaceshipId == null)
@@ -157,6 +157,84 @@ namespace TARpe22ShopVaitmaa.Controllers
             }
 
             return RedirectToAction(nameof(Index));
+        }
+        [HttpGet]
+        public async Task<IActionResult> Details(Guid id)
+        {
+
+            var spaceship = await _spaceshipsServices.GetAsync(id);
+            if (spaceship == null)
+            {
+                return NotFound();
+            }
+
+            var vm = new SpaceshipDetailsViewModel()
+            {
+
+                Id = spaceship.Id,
+                Price = spaceship.Price,
+                Type = spaceship.Type,
+                Name = spaceship.Name,
+                Description = spaceship.Description,
+                FuelType = spaceship.FuelType,
+                FuelCapacity = spaceship.FuelCapacity,
+                FuelConsumption = spaceship.FuelConsumption,
+                PassengerCount = spaceship.PassengerCount,
+                EnginePower = spaceship.EnginePower,
+                DoesHaveAutopilot = spaceship.DoesHaveAutopilot,
+                CrewCount = spaceship.CrewCount,
+                CargoWeight = spaceship.CargoWeight,
+                DoesHaveLifeSupportSystems = spaceship.DoesHaveLifeSupportSystems,
+                BuiltDate = spaceship.BuiltDate,
+                LastMaintenance = spaceship.LastMaintenance,
+                MaintenanceCount = spaceship.MaintenanceCount,
+                FullTripsCount = spaceship.FullTripsCount,
+                MaidenLaunch = spaceship.MaidenLaunch,
+                Manufacturer = spaceship.Manufacturer,
+                CreatedAt = spaceship.CreatedAt,
+                ModifiedAt = spaceship.ModifiedAt,
+            };
+
+            return View(vm);
+        }
+        [HttpGet]
+        public async Task<IActionResult> Delete(Guid id)
+        {
+
+            var spaceship = await _spaceshipsServices.GetAsync(id);
+            if (spaceship == null)
+            {
+                return NotFound();
+            }
+
+            var vm = new SpaceshipDeleteViewModel()
+            {
+
+                Id = spaceship.Id,
+                Price = spaceship.Price,
+                Type = spaceship.Type,
+                Name = spaceship.Name,
+                Description = spaceship.Description,
+                FuelType = spaceship.FuelType,
+                FuelCapacity = spaceship.FuelCapacity,
+                FuelConsumption = spaceship.FuelConsumption,
+                PassengerCount = spaceship.PassengerCount,
+                EnginePower = spaceship.EnginePower,
+                DoesHaveAutopilot = spaceship.DoesHaveAutopilot,
+                CrewCount = spaceship.CrewCount,
+                CargoWeight = spaceship.CargoWeight,
+                DoesHaveLifeSupportSystems = spaceship.DoesHaveLifeSupportSystems,
+                BuiltDate = spaceship.BuiltDate,
+                LastMaintenance = spaceship.LastMaintenance,
+                MaintenanceCount = spaceship.MaintenanceCount,
+                FullTripsCount = spaceship.FullTripsCount,
+                MaidenLaunch = spaceship.MaidenLaunch,
+                Manufacturer = spaceship.Manufacturer,
+                CreatedAt = spaceship.CreatedAt,
+                ModifiedAt = spaceship.ModifiedAt,
+            };
+
+            return View(vm);
         }
     }
 }

@@ -100,5 +100,11 @@ namespace TARpe22ShopVaitmaa.ApplicationServices.Services
             await _context.SaveChangesAsync();
             return spaceshipId;
         }
+        public async Task<Spaceship> GetAsync(Guid id)
+        {
+            var result = await _context.Spaceships
+                .FirstOrDefaultAsync(x => x.Id == id);
+            return result;
+        }
     }
 }
