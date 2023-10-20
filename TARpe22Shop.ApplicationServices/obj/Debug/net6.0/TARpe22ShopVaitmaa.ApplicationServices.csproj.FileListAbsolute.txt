@@ -10,3 +10,8 @@ G:\Users\K\Desktop\teetch\shopproject\tarpe22\TARpe22ShopVaitmaa\TARpe22Shop.App
 G:\Users\K\Desktop\teetch\shopproject\tarpe22\TARpe22ShopVaitmaa\TARpe22Shop.ApplicationServices\obj\Debug\net6.0\refint\TARpe22ShopVaitmaa.ApplicationServices.dll
 G:\Users\K\Desktop\teetch\shopproject\tarpe22\TARpe22ShopVaitmaa\TARpe22Shop.ApplicationServices\obj\Debug\net6.0\TARpe22ShopVaitmaa.ApplicationServices.pdb
 G:\Users\K\Desktop\teetch\shopproject\tarpe22\TARpe22ShopVaitmaa\TARpe22Shop.ApplicationServices\obj\Debug\net6.0\ref\TARpe22ShopVaitmaa.ApplicationServices.dll
+G:\Users\K\Desktop\teetch\shopproject\tarpe22\TARpe22ShopVaitmaa\TARpe22Shop.ApplicationServices\bin\Debug\net6.0\TARpe22ShopVaitmaa.Core.dll
+G:\Users\K\Desktop\teetch\shopproject\tarpe22\TARpe22ShopVaitmaa\TARpe22Shop.ApplicationServices\bin\Debug\net6.0\TARpe22ShopVaitmaa.Data.dll
+G:\Users\K\Desktop\teetch\shopproject\tarpe22\TARpe22ShopVaitmaa\TARpe22Shop.ApplicationServices\bin\Debug\net6.0\TARpe22ShopVaitmaa.Data.pdb
+G:\Users\K\Desktop\teetch\shopproject\tarpe22\TARpe22ShopVaitmaa\TARpe22Shop.ApplicationServices\bin\Debug\net6.0\TARpe22ShopVaitmaa.Core.pdb
+G:\Users\K\Desktop\teetch\shopproject\tarpe22\TARpe22ShopVaitmaa\TARpe22Shop.ApplicationServices\obj\Debug\net6.0\TARpe22ShopVaitmaa.ApplicationServices.csproj.CopyComplete

@@ -1,5 +1,12 @@
 ﻿@model TARpe22ShopVaitmaa.Models.Spaceship.SpaceshipEditViewModel
-
+@*@if (Model != )
+{
+    <h1>Update</h1>
+}
+else
+{
+    <h1>Add</h1>
+}*@
 <h1>Add</h1>
 
 <div>
@@ -128,6 +135,8 @@
                 <input asp-for="Manufacturer" class="form-control" />
             </div>
         </div>
-
+        <input asp-action="add" asp-controller="spaceships" type="submit" class="btn btn-primary" value="Add" />
+        <a asp-action="edit" asp-controller="spaceships" class="btn btn-primary">Edit</a>
+        <input asp-action="update" asp-controller="spaceships" type="submit" class="btn btn-primary" value="Update" />
     </form>
 </div>

@@ -1,4 +1,5 @@
 using Microsoft.EntityFrameworkCore;
+using TARpe22ShopVaitmaa.ApplicationServices.Services;
 using TARpe22ShopVaitmaa.Core.ServiceInterface;
 using TARpe22ShopVaitmaa.Data;
 

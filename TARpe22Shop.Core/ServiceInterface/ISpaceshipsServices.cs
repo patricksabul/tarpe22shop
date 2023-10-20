@@ -11,5 +11,7 @@ namespace TARpe22ShopVaitmaa.Core.ServiceInterface
     public interface ISpaceshipsServices
     {
         Task<Spaceship> Add(SpaceshipDto dto);
+        Task<Spaceship> GetUpdate(Guid id);
+        Task<Spaceship> Update(SpaceshipDto dto);
     }
 }

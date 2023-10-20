@@ -70,3 +70,5 @@ G:\Users\K\Desktop\teetch\shopproject\tarpe22\TARpe22ShopVaitmaa\TARpe22ShopVait
 G:\Users\K\Desktop\teetch\shopproject\tarpe22\TARpe22ShopVaitmaa\TARpe22ShopVaitmaa\obj\Debug\net6.0\ref\TARpe22ShopVaitmaa.dll
 G:\Users\K\Desktop\teetch\shopproject\tarpe22\TARpe22ShopVaitmaa\TARpe22ShopVaitmaa\bin\Debug\net6.0\Humanizer.dll
 G:\Users\K\Desktop\teetch\shopproject\tarpe22\TARpe22ShopVaitmaa\TARpe22ShopVaitmaa\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Design.dll
+G:\Users\K\Desktop\teetch\shopproject\tarpe22\TARpe22ShopVaitmaa\TARpe22ShopVaitmaa\bin\Debug\net6.0\TARpe22ShopVaitmaa.ApplicationServices.dll
+G:\Users\K\Desktop\teetch\shopproject\tarpe22\TARpe22ShopVaitmaa\TARpe22ShopVaitmaa\bin\Debug\net6.0\TARpe22ShopVaitmaa.ApplicationServices.pdb

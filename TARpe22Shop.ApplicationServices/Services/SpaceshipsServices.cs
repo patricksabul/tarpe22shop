@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -51,6 +52,45 @@ namespace TARpe22ShopVaitmaa.ApplicationServices.Services
             await _context.SaveChangesAsync();
 
             return domain; 
+        }
+        public async Task<Spaceship> Update(SpaceshipDto dto)
+        {
+            var domain = new Spaceship()
+            {
+                Id = dto.Id,
+                Price = dto.Price,
+                Type = dto.Type,
+                Name = dto.Name,
+                Description = dto.Description,
+                FuelType = dto.FuelType,
+                FuelCapacity = dto.FuelCapacity,
+                FuelConsumption = dto.FuelConsumption,
+                PassengerCount = dto.PassengerCount,
+                EnginePower = dto.EnginePower,
+                DoesHaveAutopilot = dto.DoesHaveAutopilot,
+                CrewCount = dto.CrewCount,
+                CargoWeight = dto.CargoWeight,
+                DoesHaveLifeSupportSystems = dto.DoesHaveLifeSupportSystems,
+                BuiltDate = dto.BuiltDate,
+                LastMaintenance = dto.LastMaintenance,
+                MaintenanceCount = dto.MaintenanceCount,
+                FullTripsCount = dto.FullTripsCount,
+                MaidenLaunch = dto.MaidenLaunch,
+                Manufacturer = dto.Manufacturer,
+                CreatedAt = dto.CreatedAt,
+                ModifiedAt = dto.ModifiedAt,
+            };
+
+            _context.Spaceships.Update(domain);
+            await _context.SaveChangesAsync();
+
+            return domain;
+        }
+        public async Task<Spaceship> GetUpdate(Guid id)
+        {
+            var result = await _context.Spaceships
+                .FirstOrDefaultAsync(x => x.Id == id);
+            return result;
         }
     }
 }
