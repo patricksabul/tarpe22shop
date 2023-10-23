@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using TARpe22ShopVaitmaa.Core.Dto;
 using TARpe22ShopVaitmaa.Core.ServiceInterface;
 using TARpe22ShopVaitmaa.Data;
@@ -67,7 +68,7 @@ namespace TARpe22ShopVaitmaa.Controllers
                 Files = vm.Files,
                 Image = vm.Image.Select(x => new FileToDatabaseDto
                 {
-                    Id = x.Id,
+                    Id = x.ImageId,
                     ImageData = x.ImageData,
                     ImageTitle = x.ImageTitle,
                     SpaceshipId = x.SpaceshipId,
@@ -89,33 +90,42 @@ namespace TARpe22ShopVaitmaa.Controllers
             {
                 return NotFound();
             }
+            var photos = await _context.FilesToDatabase
+                .Where(x => x.SpaceshipId == id)
+                .Select(y => new ImageViewModel
+                {
+                    SpaceshipId = y.Id,
+                    ImageId = y.Id,
+                    ImageData = y.ImageData,
+                    ImageTitle = y.ImageTitle,
+                    Image = string.Format("data:image.gif;base64,{0}", Convert.ToBase64String(y.ImageData))
 
-            var vm = new SpaceshipCreateUpdateViewModel()
-            {
+                }). ToArrayAsync();
+            var vm = new SpaceshipCreateUpdateViewModel();
 
-                Id = spaceship.Id,
-                Price = spaceship.Price,
-                Type = spaceship.Type,
-                Name = spaceship.Name,
-                Description = spaceship.Description,
-                FuelType = spaceship.FuelType,
-                FuelCapacity = spaceship.FuelCapacity,
-                FuelConsumption = spaceship.FuelConsumption,
-                PassengerCount = spaceship.PassengerCount,
-                EnginePower = spaceship.EnginePower,
-                DoesHaveAutopilot = spaceship.DoesHaveAutopilot,
-                CrewCount = spaceship.CrewCount,
-                CargoWeight = spaceship.CargoWeight,
-                DoesHaveLifeSupportSystems = spaceship.DoesHaveLifeSupportSystems,
-                BuiltDate = spaceship.BuiltDate,
-                LastMaintenance = spaceship.LastMaintenance,
-                MaintenanceCount = spaceship.MaintenanceCount,
-                FullTripsCount = spaceship.FullTripsCount,
-                MaidenLaunch = spaceship.MaidenLaunch,
-                Manufacturer = spaceship.Manufacturer,
-                CreatedAt = spaceship.CreatedAt,
-                ModifiedAt = spaceship.ModifiedAt,
-            };
+            vm.Id = spaceship.Id;
+            vm.Price = spaceship.Price;
+            vm.Type = spaceship.Type;
+            vm.Name = spaceship.Name;
+            vm.Description = spaceship.Description;
+            vm.FuelType = spaceship.FuelType;
+            vm.FuelCapacity = spaceship.FuelCapacity;
+            vm.FuelConsumption = spaceship.FuelConsumption;
+            vm.PassengerCount = spaceship.PassengerCount;
+            vm.EnginePower = spaceship.EnginePower;
+            vm.DoesHaveAutopilot = spaceship.DoesHaveAutopilot;
+            vm.CrewCount = spaceship.CrewCount;
+            vm.CargoWeight = spaceship.CargoWeight;
+            vm.DoesHaveLifeSupportSystems = spaceship.DoesHaveLifeSupportSystems;
+            vm.BuiltDate = spaceship.BuiltDate;
+            vm.LastMaintenance = spaceship.LastMaintenance;
+            vm.MaintenanceCount = spaceship.MaintenanceCount;
+            vm.FullTripsCount = spaceship.FullTripsCount;
+            vm.MaidenLaunch = spaceship.MaidenLaunch;
+            vm.Manufacturer = spaceship.Manufacturer;
+            vm.CreatedAt = spaceship.CreatedAt;
+            vm.ModifiedAt = spaceship.ModifiedAt;
+            vm.Image.AddRange(photos);
 
             return View("CreateUpdate",vm);
         }
@@ -164,33 +174,40 @@ namespace TARpe22ShopVaitmaa.Controllers
             {
                 return NotFound();
             }
+            var photos = await _context.FilesToDatabase
+                .Where(x => x.SpaceshipId == id)
+                .Select(y => new ImageViewModel
+                {
+                    SpaceshipId = y.Id,
+                    ImageId = y.Id,
+                    ImageData = y.ImageData,
+                    ImageTitle = y.ImageTitle,
+                    Image = string.Format("data:image/gif;base64,{0}", Convert.ToBase64String(y.ImageData))
+                }).ToArrayAsync();
+            var vm = new SpaceshipDetailsViewModel();
 
-            var vm = new SpaceshipDetailsViewModel()
-            {
-
-                Id = spaceship.Id,
-                Price = spaceship.Price,
-                Type = spaceship.Type,
-                Name = spaceship.Name,
-                Description = spaceship.Description,
-                FuelType = spaceship.FuelType,
-                FuelCapacity = spaceship.FuelCapacity,
-                FuelConsumption = spaceship.FuelConsumption,
-                PassengerCount = spaceship.PassengerCount,
-                EnginePower = spaceship.EnginePower,
-                DoesHaveAutopilot = spaceship.DoesHaveAutopilot,
-                CrewCount = spaceship.CrewCount,
-                CargoWeight = spaceship.CargoWeight,
-                DoesHaveLifeSupportSystems = spaceship.DoesHaveLifeSupportSystems,
-                BuiltDate = spaceship.BuiltDate,
-                LastMaintenance = spaceship.LastMaintenance,
-                MaintenanceCount = spaceship.MaintenanceCount,
-                FullTripsCount = spaceship.FullTripsCount,
-                MaidenLaunch = spaceship.MaidenLaunch,
-                Manufacturer = spaceship.Manufacturer,
-                CreatedAt = spaceship.CreatedAt,
-                ModifiedAt = spaceship.ModifiedAt,
-            };
+            vm.Id = spaceship.Id;
+            vm.Price = spaceship.Price;
+            vm.Type = spaceship.Type;
+            vm.Name = spaceship.Name;
+            vm.Description = spaceship.Description;
+            vm.FuelType = spaceship.FuelType;
+            vm.FuelCapacity = spaceship.FuelCapacity;
+            vm.FuelConsumption = spaceship.FuelConsumption;
+            vm.PassengerCount = spaceship.PassengerCount;
+            vm.EnginePower = spaceship.EnginePower;
+            vm.DoesHaveAutopilot = spaceship.DoesHaveAutopilot;
+            vm.CrewCount = spaceship.CrewCount;
+            vm.CargoWeight = spaceship.CargoWeight;
+            vm.DoesHaveLifeSupportSystems = spaceship.DoesHaveLifeSupportSystems;
+            vm.BuiltDate = spaceship.BuiltDate;
+            vm.LastMaintenance = spaceship.LastMaintenance;
+            vm.MaintenanceCount = spaceship.MaintenanceCount;
+            vm.FullTripsCount = spaceship.FullTripsCount;
+            vm.MaidenLaunch = spaceship.MaidenLaunch;
+            vm.Manufacturer = spaceship.Manufacturer;
+            vm.CreatedAt = spaceship.CreatedAt;
+            vm.ModifiedAt = spaceship.ModifiedAt;
 
             return View(vm);
         }
