@@ -1,13 +1,12 @@
 ﻿@model TARpe22ShopVaitmaa.Models.Spaceship.SpaceshipCreateUpdateViewModel
-@*@if (Model != )
+@if (Model.Id != null)
 {
     <h1>Update</h1>
 }
 else
 {
-    <h1>Add</h1>
-}*@
-<h1>Create</h1>
+    <h1>Create</h1>
+}
 
 <div>
     <form method="post" enctype="multipart/form-data">
@@ -129,7 +128,13 @@ else
                 <input asp-for="Manufacturer" class="form-control" />
             </div>
         </div>
-        @if (Model.Id.HasValue)
+        <hr />
+        @foreach (var images in Model.Image)
+        {
+            <partial name="_images" model="images"/>
+        }
+        <hr />
+        @if (Model.Id != null)
         {
             <input asp-action="update" asp-controller="spaceships" type="submit" class="btn btn-primary" value="Update" />
         }

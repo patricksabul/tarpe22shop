@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using TARpe22ShopVaitmaa.Data;
 
@@ -11,9 +12,10 @@ using TARpe22ShopVaitmaa.Data;
 namespace TARpe22ShopVaitmaa.Data.Migrations
 {
     [DbContext(typeof(TARpe22ShopVaitmaaContext))]
-    partial class TARpe22ShopVaitmaaContextModelSnapshot : ModelSnapshot
+    [Migration("20231023062913_imageimplementation")]
+    partial class imageimplementation
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

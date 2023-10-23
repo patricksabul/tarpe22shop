@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Http;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -28,6 +29,8 @@ namespace TARpe22ShopVaitmaa.Core.Dto
         public int FullTripsCount { get; set; } //how many voyages the ship has gone through
         public DateTime MaidenLaunch { get; set; } //when did the ship take its first voyage
         public string Manufacturer { get; set; } //who manufactured the spaceship
+        public List<IFormFile> Files { get; set; }
+        public IEnumerable<FileToDatabaseDto> Image { get; set; } = new List<FileToDatabaseDto>();
 
         //database info only, do not display to user
 

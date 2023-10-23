@@ -1,5 +1,4 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using TARpe22ShopVaitmaa.Core.Domain.Spaceship;
 using TARpe22ShopVaitmaa.Core.Dto;
 using TARpe22ShopVaitmaa.Core.ServiceInterface;
 using TARpe22ShopVaitmaa.Data;
@@ -65,6 +64,14 @@ namespace TARpe22ShopVaitmaa.Controllers
                 Manufacturer = vm.Manufacturer,
                 CreatedAt = vm.CreatedAt,
                 ModifiedAt = vm.ModifiedAt,
+                Files = vm.Files,
+                Image = vm.Image.Select(x => new FileToDatabaseDto
+                {
+                    Id = x.Id,
+                    ImageData = x.ImageData,
+                    ImageTitle = x.ImageTitle,
+                    SpaceshipId = x.SpaceshipId,
+                }).ToArray() 
             };
             var result = await _spaceshipsServices.Create(dto);
             if (result == null)

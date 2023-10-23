@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TARpe22ShopVaitmaa.Core.Domain.Spaceship
+namespace TARpe22ShopVaitmaa.Core.Domain
 {
     public class Spaceship
     {
@@ -34,7 +34,7 @@ namespace TARpe22ShopVaitmaa.Core.Domain.Spaceship
         //database info only, do not display to user
 
         public DateTime CreatedAt { get; set; } //when was the entry created into the database
-        public DateTime ModifiedAt { get; set;} //when the entry was last modified at
+        public DateTime ModifiedAt { get; set; } //when the entry was last modified at
 
     }
 }
