@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -18,7 +19,7 @@ namespace TARpe22ShopVaitmaa.ApplicationServices.Services
             _context = context;
         }
 
-        public void UploadFilestoDatabase(SpaceshipDto dto, Spaceship domain)
+        public void UploadFilesToDatabase(SpaceshipDto dto, Spaceship domain)
         {
             if (dto.Files != null && dto.Files.Count > 0)
             {
@@ -40,10 +41,14 @@ namespace TARpe22ShopVaitmaa.ApplicationServices.Services
                 }
             }
         }
-
-        public void UploadFilesToDatabase(SpaceshipDto dto, Spaceship domain)
+        public async Task<FileToDatabase> RemoveImage(FileToDatabaseDto dto)
         {
-            throw new NotImplementedException();
+            var image = await _context.FilesToDatabase
+                .Where(x => x.Id == dto.Id)
+                .FirstOrDefaultAsync();
+            _context.FilesToDatabase.Remove(image);
+            await _context.SaveChangesAsync();
+            return image;
         }
     }
 }
