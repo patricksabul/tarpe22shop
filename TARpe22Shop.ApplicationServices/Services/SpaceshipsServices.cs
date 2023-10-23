@@ -88,6 +88,11 @@ namespace TARpe22ShopVaitmaa.ApplicationServices.Services
                 ModifiedAt = dto.ModifiedAt,
             };
 
+            if (dto.Files != null)
+            {
+                _files.UploadFilesToDatabase(dto, domain);
+            }
+
             _context.Spaceships.Update(domain);
             await _context.SaveChangesAsync();
 
