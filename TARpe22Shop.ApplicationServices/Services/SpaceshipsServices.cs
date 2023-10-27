@@ -50,12 +50,11 @@ namespace TARpe22ShopVaitmaa.ApplicationServices.Services
             spaceship.CreatedAt = dto.CreatedAt;
             spaceship.ModifiedAt = dto.ModifiedAt;
 
+            await _context.Spaceships.AddAsync(spaceship);
             if (dto.Files != null)
             {
                 _files.UploadFilesToDatabase(dto, spaceship);
             }
-
-            await _context.Spaceships.AddAsync(spaceship);
             await _context.SaveChangesAsync();
 
             return spaceship; 
@@ -104,7 +103,20 @@ namespace TARpe22ShopVaitmaa.ApplicationServices.Services
                 .FirstOrDefaultAsync(x => x.Id == id);
             _context.Spaceships.Remove(spaceshipId);
             await _context.SaveChangesAsync();
+            var images = await _context.FilesToDatabase
+                .Where(x => x.SpaceshipId == id)
+                .Select(y => new FileToDatabaseDto
+                {
+                    Id = y.Id,
+                    ImageTitle = y.ImageTitle,
+                    SpaceshipId = y.SpaceshipId
+                }).ToArrayAsync();
+
+            await _files.RemoveImagesFromDatabase(images);
+            _context.Spaceships.Remove(spaceshipId);
+
             return spaceshipId;
+
         }
         public async Task<Spaceship> GetAsync(Guid id)
         {

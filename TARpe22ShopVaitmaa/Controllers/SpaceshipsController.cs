@@ -158,7 +158,7 @@ namespace TARpe22ShopVaitmaa.Controllers
                 MaidenLaunch = vm.MaidenLaunch,
                 Manufacturer = vm.Manufacturer,
                 CreatedAt = vm.CreatedAt,
-                ModifiedAt = vm.ModifiedAt,
+                ModifiedAt = DateTime.Now,
                 Files = vm.Files,
                 Image = vm.Image.Select(x => new FileToDatabaseDto
                 {
@@ -219,6 +219,7 @@ namespace TARpe22ShopVaitmaa.Controllers
             vm.Manufacturer = spaceship.Manufacturer;
             vm.CreatedAt = spaceship.CreatedAt;
             vm.ModifiedAt = spaceship.ModifiedAt;
+            vm.Image.AddRange(photos);
 
             return View(vm);
         }
