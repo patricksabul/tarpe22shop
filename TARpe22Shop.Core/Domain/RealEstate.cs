@@ -34,6 +34,7 @@ namespace TARpe22ShopVaitmaa.Core.Domain
         public bool IsPropertySold { get; set; }
         public bool DoesHaveSwimmingPool { get; set; }
         public DateTime? BuiltAt { get; set; }
+        public IEnumerable<FileToApi> FilesToApi { get; set; } = new List<FileToApi>();
 
         //db only
         public DateTime CreatedAt { get; set; }

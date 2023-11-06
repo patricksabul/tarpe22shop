@@ -14,18 +14,21 @@ namespace TARpe22ShopVaitmaa.ApplicationServices.Services
     public class RealEstatesServices : IRealEstatesServices
     {
         private readonly TARpe22ShopVaitmaaContext _context;
+        private readonly IFilesServices _filesServices;
         public RealEstatesServices
             (
-            TARpe22ShopVaitmaaContext context
+            TARpe22ShopVaitmaaContext context,
+            IFilesServices filesServices
             )
         {
             _context = context;
+            _filesServices = filesServices;
         }
-        public async Task<RealEstate> GetAsync()
+        public async Task<RealEstate> GetAsync(Guid id)
         {
-            //var result = await _context.RealEstates
-            //    .FirstOrDefaultAsync(x => x.Id == id);
-            return null;
+            var result = await _context.RealEstates
+                .FirstOrDefaultAsync(x => x.Id == id);
+            return result;
         }
         public async Task<RealEstate> Create(RealEstateDto dto)
         {
@@ -47,6 +50,7 @@ namespace TARpe22ShopVaitmaa.ApplicationServices.Services
             }
             realEstate.CreatedAt = DateTime.Now;
             realEstate.ModifiedAt = DateTime.Now;
+            _filesServices.FilesToApi(dto, realEstate);
 
             await _context.RealEstates.AddAsync(realEstate);
             await _context.SaveChangesAsync();
@@ -71,6 +75,43 @@ namespace TARpe22ShopVaitmaa.ApplicationServices.Services
             //realEstate.IsPropertySold = dto.IsPropertySold;
             //realEstate.DoesHaveSwimmingPool = dto.DoesHaveSwimmingPool;
             //realEstate.BuiltAt = dto.BuiltAt
+        }
+        public async Task<RealEstate> Delete(Guid id)
+        {
+            var realEstateId = await _context.RealEstates
+                .FirstOrDefaultAsync(x => x.Id == id);
+            _context.RealEstates.Remove(realEstateId);
+            await _context.SaveChangesAsync();
+            return realEstateId;
+        }
+
+        public async Task<RealEstate> Update(RealEstateDto dto)
+        {
+            var domain = new RealEstate()
+            {
+                Id = Guid.NewGuid(),
+                Type = dto.Type,
+                ListingDescription = dto.ListingDescription,
+                Address = dto.Address,
+                City = dto.City,
+                PostalCode = dto.PostalCode,
+                ContactPhone = dto.ContactPhone,
+                ContactFax = dto.ContactFax,
+                SquareMeters = dto.SquareMeters,
+                Floor = dto.Floor,
+                FloorCount = dto.FloorCount,
+                Price = dto.Price,
+                RoomCount = dto.RoomCount,
+                BedroomCount = dto.BedroomCount,
+                BathroomCount = dto.BathroomCount,
+                WhenEstateListedAt = dto.WhenEstateListedAt,
+                IsPropertySold = dto.IsPropertySold,
+                DoesHaveSwimmingPool = dto.DoesHaveSwimmingPool,
+                BuiltAt = dto.BuiltAt
+            };
+            _context.RealEstates.Update(domain);
+            await _context.SaveChangesAsync();
+            return domain;
         }
     }
 }

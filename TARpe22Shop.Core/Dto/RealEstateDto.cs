@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Http;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -31,6 +32,8 @@ namespace TARpe22ShopVaitmaa.Core.Dto
         public bool IsPropertySold { get; set; }
         public bool DoesHaveSwimmingPool { get; set; }
         public DateTime? BuiltAt { get; set; }
+        public List<IFormFile> Files { get; set; }
+        public IEnumerable<FileToApiDto> FileToApiDtos { get; set; } = new List<FileToApiDto>();
 
         //db only
         public DateTime CreatedAt { get; set; }

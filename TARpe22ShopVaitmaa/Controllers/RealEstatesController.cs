@@ -67,6 +67,14 @@ namespace TARpe22ShopVaitmaa.Controllers
                 BuiltAt = vm.BuiltAt,
                 CreatedAt = DateTime.Now,
                 ModifiedAt = DateTime.Now,
+                Files = vm.Files,
+                FileToApiDtos = vm.FileToApiViewModels
+                .Select(x => new FileToApiDto
+                {
+                    Id = x.ImageId,
+                    ExistingFilePath = x.FilePath,
+                    RealEstateId = x.RealEstateId,
+                }).ToArray()
             };
             var result = await _realEstatesServices.Create(dto);
             if (result == null)
@@ -75,6 +83,19 @@ namespace TARpe22ShopVaitmaa.Controllers
             }
             return RedirectToAction("Index", vm);
 
+        }
+        [HttpGet]
+        public async Task<IActionResult> Update(Guid id)
+        {
+            var realEstate=  await _realEstatesServices.GetAsync(id);
+            if (realEstate == null)
+            {
+                return NotFound();
+            }
+            var vm = new RealEstateCreateUpdateViewModel();
+
+
+            //jäime pooleli siia <- httpget update
         }
     }
 }
