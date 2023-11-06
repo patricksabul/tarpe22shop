@@ -11,6 +11,6 @@ namespace TARpe22ShopVaitmaa.Core.ServiceInterface
     public interface IRealEstatesServices
     {
         Task<RealEstate> Create(RealEstateDto dto);
-        Task<RealEstate> GetAsync(Guid id);
+        Task<RealEstate> GetAsync();
     }
 }
