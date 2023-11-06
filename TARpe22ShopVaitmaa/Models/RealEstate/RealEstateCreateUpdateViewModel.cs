@@ -2,16 +2,16 @@
 
 namespace TARpe22ShopVaitmaa.Models.RealEstate
 {
-    public class RealEstateIndexViewModel
+    public class RealEstateCreateUpdateViewModel
     {
-        public Guid Id { get; set; } //unique id
+        public Guid? Id { get; set; } //unique id
         public EstateType Type { get; set; } //what type of property is being sold
         public string ListingDescription { get; set; } //description that encompasses anything the model doesnt
         public string Address { get; set; }
         public string County { get; set; }
         public string Country { get; set; }
         public string City { get; set; }
-        public string Location { get; set; }
+        public string Location { get { return (Country + ", " + County + ", " + City + ", " + Address); } }
         public int PostalCode { get; set; }//numeric code denoting the propertys location in the countrys registry
         public int ContactPhone { get; set; } //phone number to contact about the real estate
         public int ContactFax { get; set; } //faxing number to contact about the real estate

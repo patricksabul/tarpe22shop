@@ -21,7 +21,7 @@ namespace TARpe22ShopVaitmaa.ApplicationServices.Services
         {
             _context = context;
         }
-        public async Task<RealEstate> GetAsync(Guid id)
+        public async Task<RealEstate> GetAsync()
         {
             //var result = await _context.RealEstates
             //    .FirstOrDefaultAsync(x => x.Id == id);
