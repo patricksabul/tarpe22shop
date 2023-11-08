@@ -2,16 +2,16 @@
 
 namespace TARpe22ShopVaitmaa.Models.RealEstate
 {
-    public class RealEstateCreateUpdateViewModel
+    public class RealEstateDetailsViewModel
     {
-        public Guid? Id { get; set; } //unique id
+        public Guid Id { get; set; } //unique id
         public EstateType Type { get; set; } //what type of property is being sold
         public string ListingDescription { get; set; } //description that encompasses anything the model doesnt
         public string Address { get; set; }
         public string County { get; set; }
         public string Country { get; set; }
         public string City { get; set; }
-        public string Location { get { return (Country + ", " + County + ", " + City + ", " + Address); } }
+        public string Location { get; set; }
         public int PostalCode { get; set; }//numeric code denoting the propertys location in the countrys registry
         public int ContactPhone { get; set; } //phone number to contact about the real estate
         public int ContactFax { get; set; } //faxing number to contact about the real estate
@@ -26,8 +26,6 @@ namespace TARpe22ShopVaitmaa.Models.RealEstate
         public bool IsPropertySold { get; set; }
         public bool DoesHaveSwimmingPool { get; set; }
         public DateTime? BuiltAt { get; set; }
-        public List<IFormFile> Files { get; set; } //files associated with the obj
-        public List<FileToApiViewModel> FileToApiViewModels { get; set; } = new List<FileToApiViewModel>();
 
         //db only
         public DateTime CreatedAt { get; set; }
