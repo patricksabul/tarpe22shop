@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using System.Diagnostics.Metrics;
 using System.Drawing;
 using System.Net;
@@ -13,10 +14,12 @@ namespace TARpe22ShopVaitmaa.Controllers
     {
         private readonly IRealEstatesServices _realEstatesServices;
         private readonly TARpe22ShopVaitmaaContext _context;
-        public RealEstatesController(IRealEstatesServices realEstatesServices, TARpe22ShopVaitmaaContext context)
+        private readonly IFilesServices _filesServices;
+        public RealEstatesController(IRealEstatesServices realEstatesServices, TARpe22ShopVaitmaaContext context, IFilesServices filesServices)
         {
             _realEstatesServices = realEstatesServices;
             _context = context;
+            _filesServices = filesServices;
         }
         [HttpGet]
         public IActionResult Index()
@@ -95,6 +98,13 @@ namespace TARpe22ShopVaitmaa.Controllers
             {
                 return NotFound();
             }
+            var images = await _context.FilesToApi
+                .Where(x => x.RealEstateId == id)
+                .Select(y => new FileToApiViewModel
+                {
+                    FilePath = y.ExistingFilePath,
+                    ImageId = y.Id
+                }).ToArrayAsync();
             var vm = new RealEstateCreateUpdateViewModel();
             vm.Id = realEstate.Id;
             vm.Type = realEstate.Type;
@@ -119,6 +129,7 @@ namespace TARpe22ShopVaitmaa.Controllers
             vm.BuiltAt = realEstate.BuiltAt;
             vm.CreatedAt = realEstate.CreatedAt;
             vm.ModifiedAt = DateTime.Now;
+            vm.FileToApiViewModels.AddRange(images);
 
             return View("CreateUpdate", vm);
         }
@@ -150,6 +161,14 @@ namespace TARpe22ShopVaitmaa.Controllers
                 BuiltAt = vm.BuiltAt,
                 CreatedAt = DateTime.Now,
                 ModifiedAt = DateTime.Now,
+                Files = vm.Files,
+                FileToApiDtos = vm.FileToApiViewModels
+                .Select(x => new FileToApiDto
+                {
+                    Id = x.ImageId,
+                    ExistingFilePath = x.FilePath,
+                    RealEstateId = x.RealEstateId,
+                }).ToArray()
             };
             var result = await _realEstatesServices.Update(dto);
             if (result == null)
@@ -166,6 +185,13 @@ namespace TARpe22ShopVaitmaa.Controllers
             {
                 return NotFound();
             }
+            var images = await _context.FilesToApi
+            .Where(x => x.RealEstateId == id)
+            .Select(y => new FileToApiViewModel
+            {
+                FilePath = y.ExistingFilePath,
+                ImageId = y.Id
+            }).ToArrayAsync();
             var vm = new RealEstateDetailsViewModel(); //todo: details viewmodel
             vm.Id = realEstate.Id;
             vm.Type = realEstate.Type;
@@ -190,6 +216,7 @@ namespace TARpe22ShopVaitmaa.Controllers
             vm.BuiltAt = realEstate.BuiltAt;
             vm.CreatedAt = realEstate.CreatedAt;
             vm.ModifiedAt = realEstate.ModifiedAt;
+            vm.FileToApiViewModels.AddRange(images);
 
             return View(vm);
         }
@@ -202,7 +229,13 @@ namespace TARpe22ShopVaitmaa.Controllers
             {
                 return NotFound();
             }
-
+            var images = await _context.FilesToApi
+            .Where(x => x.RealEstateId == id)
+            .Select(y => new FileToApiViewModel
+            {
+                FilePath = y.ExistingFilePath,
+                ImageId = y.Id
+            }).ToArrayAsync();
             var vm = new RealEstateDeleteViewModel();
             vm.Id = realEstate.Id;
             vm.Type = realEstate.Type;
@@ -227,7 +260,7 @@ namespace TARpe22ShopVaitmaa.Controllers
             vm.BuiltAt = realEstate.BuiltAt;
             vm.CreatedAt = realEstate.CreatedAt;
             vm.ModifiedAt = realEstate.ModifiedAt;
-
+            vm.FileToApiViewModels.AddRange(images);
             return View(vm);
         }
         [HttpPost]
@@ -235,6 +268,20 @@ namespace TARpe22ShopVaitmaa.Controllers
         {
             var realEstate = await _realEstatesServices.Delete(id);
             if (realEstate != null)
+            {
+                return RedirectToAction(nameof(Index));
+            }
+            return RedirectToAction(nameof(Index));
+        }
+        [HttpPost]
+        public async Task<IActionResult> RemoveImage(FileToApiViewModel vm)
+        {
+            var dto = new FileToApiDto()
+            {
+                Id = vm.ImageId
+            };
+            var image = await _filesServices.RemoveImageFromApi(dto);
+            if (image == null)
             {
                 return RedirectToAction(nameof(Index));
             }

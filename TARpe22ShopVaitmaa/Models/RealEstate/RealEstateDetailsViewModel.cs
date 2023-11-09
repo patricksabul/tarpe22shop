@@ -26,6 +26,7 @@ namespace TARpe22ShopVaitmaa.Models.RealEstate
         public bool IsPropertySold { get; set; }
         public bool DoesHaveSwimmingPool { get; set; }
         public DateTime? BuiltAt { get; set; }
+        public List<FileToApiViewModel> FileToApiViewModels { get; set; } = new List<FileToApiViewModel>();
 
         //db only
         public DateTime CreatedAt { get; set; }

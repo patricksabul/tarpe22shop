@@ -79,7 +79,17 @@ namespace TARpe22ShopVaitmaa.ApplicationServices.Services
         public async Task<RealEstate> Delete(Guid id)
         {
             var realEstateId = await _context.RealEstates
+                .Include(x => x.FilesToApi)
                 .FirstOrDefaultAsync(x => x.Id == id);
+            var images = await _context.FilesToApi
+                .Where(x => x.RealEstateId == id)
+                .Select(y => new FileToApiDto
+                {
+                    Id = y.Id,
+                    RealEstateId = y.RealEstateId,
+                    ExistingFilePath = y.ExistingFilePath
+                }).ToArrayAsync();
+            await _filesServices.RemoveImagesFromApi(images);
             _context.RealEstates.Remove(realEstateId);
             await _context.SaveChangesAsync();
             return realEstateId;
@@ -87,31 +97,30 @@ namespace TARpe22ShopVaitmaa.ApplicationServices.Services
 
         public async Task<RealEstate> Update(RealEstateDto dto)
         {
-            var domain = new RealEstate()
-            {
-                Id = Guid.NewGuid(),
-                Type = dto.Type,
-                ListingDescription = dto.ListingDescription,
-                Address = dto.Address,
-                City = dto.City,
-                PostalCode = dto.PostalCode,
-                ContactPhone = dto.ContactPhone,
-                ContactFax = dto.ContactFax,
-                SquareMeters = dto.SquareMeters,
-                Floor = dto.Floor,
-                FloorCount = dto.FloorCount,
-                Price = dto.Price,
-                RoomCount = dto.RoomCount,
-                BedroomCount = dto.BedroomCount,
-                BathroomCount = dto.BathroomCount,
-                WhenEstateListedAt = dto.WhenEstateListedAt,
-                IsPropertySold = dto.IsPropertySold,
-                DoesHaveSwimmingPool = dto.DoesHaveSwimmingPool,
-                BuiltAt = dto.BuiltAt
-            };
-            _context.RealEstates.Update(domain);
+            RealEstate realEstate = new RealEstate();
+
+            realEstate.Id = dto.Id;
+            realEstate.Type = dto.Type;
+            realEstate.ListingDescription = dto.ListingDescription;
+            realEstate.Address = dto.Address;
+            realEstate.City = dto.City;
+            realEstate.PostalCode = dto.PostalCode;
+            realEstate.ContactPhone = dto.ContactPhone;
+            realEstate.ContactFax = dto.ContactFax;
+            realEstate.SquareMeters = dto.SquareMeters;
+            realEstate.Floor = dto.Floor;
+            realEstate.FloorCount = dto.FloorCount;
+            realEstate.Price = dto.Price;
+            realEstate.RoomCount = dto.RoomCount;
+            realEstate.BedroomCount = dto.BedroomCount;
+            realEstate.BathroomCount = dto.BathroomCount;
+            realEstate.WhenEstateListedAt = dto.WhenEstateListedAt;
+            realEstate.IsPropertySold = dto.IsPropertySold;
+            realEstate.DoesHaveSwimmingPool = dto.DoesHaveSwimmingPool;
+            realEstate.BuiltAt = dto.BuiltAt;
+            _context.RealEstates.Update(realEstate);
             await _context.SaveChangesAsync();
-            return domain;
+            return realEstate;
         }
     }
 }
