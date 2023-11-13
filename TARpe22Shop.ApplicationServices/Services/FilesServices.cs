@@ -113,7 +113,7 @@ namespace TARpe22ShopVaitmaa.ApplicationServices.Services
         public async Task<FileToApi> RemoveImageFromApi(FileToApiDto dto)
         {
             var imageId = await _context.FilesToApi
-                .FirstOrDefaultAsync(x => x.ExistingFilePath == dto.ExistingFilePath);
+                .FirstOrDefaultAsync(x => x.Id == dto.Id);
             var filePath = _webHost.WebRootPath + "\\multipleFileUpload\\" + imageId.ExistingFilePath;
             if (File.Exists(filePath))
             {
