@@ -34,20 +34,42 @@ namespace TARpe22ShopVaitmaa.ApplicationServices.Services
         {
             RealEstate realEstate = new();
 
-            var realEstateProps = typeof(RealEstate).GetProperties();
-            var realEstateDtoProps = typeof(RealEstateDto).GetProperties();
-            for (int i = 0; i < realEstateProps.Length; i++)
-            {
-                var realEstateProp = realEstateProps[i];
-                for (int j = 0; j < realEstateDtoProps.Length; j++)
-                {
-                    var realEstateDtoProp = realEstateDtoProps[j];
-                    if (realEstateProp.Name == realEstateDtoProp.Name)
-                    {
-                        realEstateProp.SetValue(realEstate, realEstateDtoProp.GetValue(dto));
-                    }
-                }
-            }
+            //var realEstateProps = typeof(RealEstate).GetProperties();
+            //var realEstateDtoProps = typeof(RealEstateDto).GetProperties();
+            //for (int i = 0; i < realEstateProps.Length; i++)
+            //{
+            //    var realEstateProp = realEstateProps[i];
+            //    for (int j = 0; j < realEstateDtoProps.Length; j++)
+            //    {
+            //        var realEstateDtoProp = realEstateDtoProps[j];
+            //        if (realEstateProp.Name == realEstateDtoProp.Name)
+            //        {
+            //            realEstateProp.SetValue(realEstate, realEstateDtoProp.GetValue(dto));
+            //        }
+            //    }
+            //}
+            realEstate.Id = Guid.NewGuid();
+            realEstate.Type = dto.Type;
+            realEstate.ListingDescription = dto.ListingDescription;
+            realEstate.Address = dto.Address;
+            realEstate.Country = dto.Country;
+            realEstate.County = dto.County;
+            realEstate.City = dto.City;
+            realEstate.PostalCode = dto.PostalCode;
+            realEstate.ContactPhone = dto.ContactPhone;
+            realEstate.ContactFax = dto.ContactFax;
+            realEstate.SquareMeters = dto.SquareMeters;
+            realEstate.Floor = dto.Floor;
+            realEstate.FloorCount = dto.FloorCount;
+            realEstate.Price = dto.Price;
+            realEstate.RoomCount = dto.RoomCount;
+            realEstate.BedroomCount = dto.BedroomCount;
+            realEstate.BathroomCount = dto.BathroomCount;
+            realEstate.WhenEstateListedAt = dto.WhenEstateListedAt;
+            realEstate.IsPropertySold = dto.IsPropertySold;
+            realEstate.DoesHaveSwimmingPool = dto.DoesHaveSwimmingPool;
+            realEstate.BuiltAt = dto.BuiltAt;
+
             realEstate.CreatedAt = DateTime.Now;
             realEstate.ModifiedAt = DateTime.Now;
             _filesServices.FilesToApi(dto, realEstate);
@@ -56,25 +78,7 @@ namespace TARpe22ShopVaitmaa.ApplicationServices.Services
             await _context.SaveChangesAsync();
             return realEstate;
 
-            //realEstate.Id = Guid.NewGuid();
-            //realEstate.Type = dto.Type;
-            //realEstate.ListingDescription = dto.ListingDescription;
-            //realEstate.Address = dto.Address;
-            //realEstate.City = dto.City;
-            //realEstate.PostalCode = dto.PostalCode;
-            //realEstate.ContactPhone = dto.ContactPhone;
-            //realEstate.ContactFax = dto.ContactFax;
-            //realEstate.SquareMeters = dto.SquareMeters;
-            //realEstate.Floor = dto.Floor;
-            //realEstate.FloorCount = dto.FloorCount;
-            //realEstate.Price= dto.Price;
-            //realEstate.RoomCount = dto.RoomCount;
-            //realEstate.BedroomCount = dto.BedroomCount;
-            //realEstate.BathroomCount = dto.BathroomCount;
-            //realEstate.WhenEstateListedAt = dto.WhenEstateListedAt;
-            //realEstate.IsPropertySold = dto.IsPropertySold;
-            //realEstate.DoesHaveSwimmingPool = dto.DoesHaveSwimmingPool;
-            //realEstate.BuiltAt = dto.BuiltAt
+            
         }
         public async Task<RealEstate> Delete(Guid id)
         {

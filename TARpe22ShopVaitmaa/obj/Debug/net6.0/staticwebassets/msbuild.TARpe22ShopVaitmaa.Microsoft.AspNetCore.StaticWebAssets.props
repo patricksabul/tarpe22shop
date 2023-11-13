@@ -960,6 +960,134 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\lib\jquery\LICENSE.txt))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\multipleFileUpload\03614796-bcb8-4248-8771-4cd7a9507cc8_shrekipeldik.PNG))">
+      <SourceType>Package</SourceType>
+      <SourceId>TARpe22ShopVaitmaa</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/TARpe22ShopVaitmaa</BasePath>
+      <RelativePath>multipleFileUpload/03614796-bcb8-4248-8771-4cd7a9507cc8_shrekipeldik.PNG</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\multipleFileUpload\03614796-bcb8-4248-8771-4cd7a9507cc8_shrekipeldik.PNG))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\multipleFileUpload\0b9c221b-b4ef-401b-90f3-3fb6415aae05_shrekipeldik.PNG))">
+      <SourceType>Package</SourceType>
+      <SourceId>TARpe22ShopVaitmaa</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/TARpe22ShopVaitmaa</BasePath>
+      <RelativePath>multipleFileUpload/0b9c221b-b4ef-401b-90f3-3fb6415aae05_shrekipeldik.PNG</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\multipleFileUpload\0b9c221b-b4ef-401b-90f3-3fb6415aae05_shrekipeldik.PNG))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\multipleFileUpload\25619436-31c2-4a22-9eee-7d69338f90e9_shrekipeldik.PNG))">
+      <SourceType>Package</SourceType>
+      <SourceId>TARpe22ShopVaitmaa</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/TARpe22ShopVaitmaa</BasePath>
+      <RelativePath>multipleFileUpload/25619436-31c2-4a22-9eee-7d69338f90e9_shrekipeldik.PNG</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\multipleFileUpload\25619436-31c2-4a22-9eee-7d69338f90e9_shrekipeldik.PNG))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\multipleFileUpload\4a3a9d51-3566-4d91-97f5-b142c9452d33_shrekipeldik.PNG))">
+      <SourceType>Package</SourceType>
+      <SourceId>TARpe22ShopVaitmaa</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/TARpe22ShopVaitmaa</BasePath>
+      <RelativePath>multipleFileUpload/4a3a9d51-3566-4d91-97f5-b142c9452d33_shrekipeldik.PNG</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\multipleFileUpload\4a3a9d51-3566-4d91-97f5-b142c9452d33_shrekipeldik.PNG))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\multipleFileUpload\69b02b80-34ad-44c9-b2cb-94f62f0dfa73_shrekipeldik.PNG))">
+      <SourceType>Package</SourceType>
+      <SourceId>TARpe22ShopVaitmaa</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/TARpe22ShopVaitmaa</BasePath>
+      <RelativePath>multipleFileUpload/69b02b80-34ad-44c9-b2cb-94f62f0dfa73_shrekipeldik.PNG</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\multipleFileUpload\69b02b80-34ad-44c9-b2cb-94f62f0dfa73_shrekipeldik.PNG))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\multipleFileUpload\915c0b7a-41b1-4dec-9c0d-c654715e77da_shrekipeldik.PNG))">
+      <SourceType>Package</SourceType>
+      <SourceId>TARpe22ShopVaitmaa</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/TARpe22ShopVaitmaa</BasePath>
+      <RelativePath>multipleFileUpload/915c0b7a-41b1-4dec-9c0d-c654715e77da_shrekipeldik.PNG</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\multipleFileUpload\915c0b7a-41b1-4dec-9c0d-c654715e77da_shrekipeldik.PNG))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\multipleFileUpload\d05629c9-e2c2-453d-8ee7-0ffd9500b06a_shrekipeldik.PNG))">
+      <SourceType>Package</SourceType>
+      <SourceId>TARpe22ShopVaitmaa</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/TARpe22ShopVaitmaa</BasePath>
+      <RelativePath>multipleFileUpload/d05629c9-e2c2-453d-8ee7-0ffd9500b06a_shrekipeldik.PNG</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\multipleFileUpload\d05629c9-e2c2-453d-8ee7-0ffd9500b06a_shrekipeldik.PNG))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\multipleFileUpload\f2348fbf-95b1-4a04-8e4d-1894c68673b2_shrekipeldik.PNG))">
+      <SourceType>Package</SourceType>
+      <SourceId>TARpe22ShopVaitmaa</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/TARpe22ShopVaitmaa</BasePath>
+      <RelativePath>multipleFileUpload/f2348fbf-95b1-4a04-8e4d-1894c68673b2_shrekipeldik.PNG</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\multipleFileUpload\f2348fbf-95b1-4a04-8e4d-1894c68673b2_shrekipeldik.PNG))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\TARpe22ShopVaitmaa.bundle.scp.css))">
       <SourceType>Package</SourceType>
       <SourceId>TARpe22ShopVaitmaa</SourceId>
