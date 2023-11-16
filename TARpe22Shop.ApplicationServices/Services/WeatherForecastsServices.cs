@@ -9,7 +9,7 @@ using TARpe22ShopVaitmaa.Core.Dto.WeatherDtos;
 
 namespace TARpe22ShopVaitmaa.ApplicationServices.Services
 {
-    public class WeatherForecastsServices
+    public class WeatherForecastsServices : IWeatherForecastsServices
     {
         public async Task<WeatherResultDto> WeatherDetail(WeatherResultDto dto)
         {
@@ -20,7 +20,7 @@ namespace TARpe22ShopVaitmaa.ApplicationServices.Services
             {
                 string json = client.DownloadString(url);
 
-                WeatherRootDto weatherInfo = (new JavaScriptSerializer()).Deserialize<WeatherResultDto>(json);
+                WeatherRootDto weatherInfo = (new JavaScriptSerializer()).Deserialize<WeatherRootDto>(json);
 
                 weatherInfo.Headline.EffectiveDate = dto.EffectiveDate;
                 weatherInfo.Headline.EffectiveEpochDate = dto.EffectiveEpochDate;

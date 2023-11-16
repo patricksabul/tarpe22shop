@@ -6,8 +6,12 @@ namespace TARpe22ShopVaitmaa.Models.Weather
     {
         public DateTime Date { get; set; }
         public int EpochDate { get; set; }
+        public int Severity { get; set; }
+        public string Text { get; set; }
+        public string Category { get; set; }
         public Temperatures Temperature { get; set; }
-        public DayNightCycles DayNightCycle { get; set; }
+        public DayNightCycles DayCycle { get; set; }
+        public DayNightCycles NightCycle { get; set; }
         public List<string> Sources { get; set; }
         public string MobileLink { get; set; }
         public string Link { get; set; }
