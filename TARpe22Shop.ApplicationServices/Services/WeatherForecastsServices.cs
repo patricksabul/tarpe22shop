@@ -20,7 +20,7 @@ namespace TARpe22ShopVaitmaa.ApplicationServices.Services
             {
                 string json = client.DownloadString(url);
 
-                WeatherRootDto weatherInfo = (new JavaScriptSerializer().Deserialize<WeatherResultDto>(json));
+                WeatherRootDto weatherInfo = (new JavaScriptSerializer()).Deserialize<WeatherResultDto>(json);
 
                 weatherInfo.Headline.EffectiveDate = dto.EffectiveDate;
                 weatherInfo.Headline.EffectiveEpochDate = dto.EffectiveEpochDate;
