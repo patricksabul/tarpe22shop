@@ -72,3 +72,14 @@ G:\Users\K\Desktop\teetch\shopproject\tarpe22\TARpe22ShopVaitmaa\TARpe22ShopVait
 G:\Users\K\Desktop\teetch\shopproject\tarpe22\TARpe22ShopVaitmaa\TARpe22ShopVaitmaa\obj\Debug\net6.0\TARpe22ShopVaitmaa.pdb
 G:\Users\K\Desktop\teetch\shopproject\tarpe22\TARpe22ShopVaitmaa\TARpe22ShopVaitmaa\obj\Debug\net6.0\TARpe22ShopVaitmaa.genruntimeconfig.cache
 G:\Users\K\Desktop\teetch\shopproject\tarpe22\TARpe22ShopVaitmaa\TARpe22ShopVaitmaa\obj\Debug\net6.0\ref\TARpe22ShopVaitmaa.dll
+C:\Users\jyri.vaitmaa\source\repos\TARpe22ShopVaitmaa\TARpe22ShopVaitmaa\obj\Debug\net6.0\TARpe22ShopVaitmaa.csproj.AssemblyReference.cache
+C:\Users\jyri.vaitmaa\source\repos\TARpe22ShopVaitmaa\TARpe22ShopVaitmaa\obj\Debug\net6.0\TARpe22ShopVaitmaa.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\jyri.vaitmaa\source\repos\TARpe22ShopVaitmaa\TARpe22ShopVaitmaa\obj\Debug\net6.0\TARpe22ShopVaitmaa.AssemblyInfoInputs.cache
+C:\Users\jyri.vaitmaa\source\repos\TARpe22ShopVaitmaa\TARpe22ShopVaitmaa\obj\Debug\net6.0\TARpe22ShopVaitmaa.AssemblyInfo.cs
+C:\Users\jyri.vaitmaa\source\repos\TARpe22ShopVaitmaa\TARpe22ShopVaitmaa\obj\Debug\net6.0\TARpe22ShopVaitmaa.csproj.CoreCompileInputs.cache
+C:\Users\jyri.vaitmaa\source\repos\TARpe22ShopVaitmaa\TARpe22ShopVaitmaa\obj\Debug\net6.0\TARpe22ShopVaitmaa.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\jyri.vaitmaa\source\repos\TARpe22ShopVaitmaa\TARpe22ShopVaitmaa\obj\Debug\net6.0\TARpe22ShopVaitmaa.RazorAssemblyInfo.cache
+C:\Users\jyri.vaitmaa\source\repos\TARpe22ShopVaitmaa\TARpe22ShopVaitmaa\obj\Debug\net6.0\TARpe22ShopVaitmaa.RazorAssemblyInfo.cs
+C:\Users\jyri.vaitmaa\source\repos\TARpe22ShopVaitmaa\TARpe22ShopVaitmaa\obj\Debug\net6.0\TARpe22ShopVaitmaa.dll
+C:\Users\jyri.vaitmaa\source\repos\TARpe22ShopVaitmaa\TARpe22ShopVaitmaa\obj\Debug\net6.0\refint\TARpe22ShopVaitmaa.dll
+C:\Users\jyri.vaitmaa\source\repos\TARpe22ShopVaitmaa\TARpe22ShopVaitmaa\obj\Debug\net6.0\TARpe22ShopVaitmaa.pdb
