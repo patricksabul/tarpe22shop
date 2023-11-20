@@ -8,7 +8,6 @@ namespace TARpe22ShopVaitmaa.Core.Dto.WeatherDtos
 {
     public class WeatherResultDto
     {
-        public bool DayHasPrecipitation;
         public DateTime EffectiveDate { get; set; }
         public int EffectiveEpochDate { get; set; }
         public int Severity { get; set; }
@@ -32,7 +31,7 @@ namespace TARpe22ShopVaitmaa.Core.Dto.WeatherDtos
         public int TempMaxUnitType { get; set; }
 
         public int DayIcon { get; set; }
-        public bool DayHasPercipitation { get; set; }
+        public bool DayHasPrecipitation { get; set; }
         public string DayIconPhrase { get; set; }
         public string DayPrecipitationType{ get; set; }
         public string DayPrecipitationIntensity { get; set; }
