@@ -72,3 +72,8 @@ G:\Users\K\Desktop\teetch\shopproject\tarpe22\TARpe22ShopVaitmaa\TARpe22ShopVait
 G:\Users\K\Desktop\teetch\shopproject\tarpe22\TARpe22ShopVaitmaa\TARpe22ShopVaitmaa\obj\Debug\net6.0\TARpe22ShopVaitmaa.pdb
 G:\Users\K\Desktop\teetch\shopproject\tarpe22\TARpe22ShopVaitmaa\TARpe22ShopVaitmaa\obj\Debug\net6.0\TARpe22ShopVaitmaa.genruntimeconfig.cache
 G:\Users\K\Desktop\teetch\shopproject\tarpe22\TARpe22ShopVaitmaa\TARpe22ShopVaitmaa\obj\Debug\net6.0\ref\TARpe22ShopVaitmaa.dll
+G:\Users\K\Desktop\teetch\shopproject\tarpe22\TARpe22ShopVaitmaa\TARpe22ShopVaitmaa\bin\Debug\net6.0\Microsoft.DotNet.PlatformAbstractions.dll
+G:\Users\K\Desktop\teetch\shopproject\tarpe22\TARpe22ShopVaitmaa\TARpe22ShopVaitmaa\bin\Debug\net6.0\Microsoft.Extensions.DependencyModel.dll
+G:\Users\K\Desktop\teetch\shopproject\tarpe22\TARpe22ShopVaitmaa\TARpe22ShopVaitmaa\bin\Debug\net6.0\Microsoft.Extensions.PlatformAbstractions.dll
+G:\Users\K\Desktop\teetch\shopproject\tarpe22\TARpe22ShopVaitmaa\TARpe22ShopVaitmaa\bin\Debug\net6.0\Nancy.dll
+G:\Users\K\Desktop\teetch\shopproject\tarpe22\TARpe22ShopVaitmaa\TARpe22ShopVaitmaa\bin\Debug\net6.0\Newtonsoft.Json.dll

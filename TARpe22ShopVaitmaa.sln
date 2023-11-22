@@ -3,13 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.33627.172
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TARpe22ShopVaitmaa", "TARpe22ShopVaitmaa\TARpe22ShopVaitmaa.csproj", "{CABB7B7B-5BAA-417B-9086-97200623F599}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TARpe22ShopVaitmaa", "TARpe22ShopVaitmaa\TARpe22ShopVaitmaa.csproj", "{CABB7B7B-5BAA-417B-9086-97200623F599}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TARpe22ShopVaitmaa.Data", "TARpe22Shop.Data\TARpe22ShopVaitmaa.Data.csproj", "{AA43C438-A709-473F-8E53-3E37E6D0C92B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TARpe22ShopVaitmaa.Data", "TARpe22Shop.Data\TARpe22ShopVaitmaa.Data.csproj", "{AA43C438-A709-473F-8E53-3E37E6D0C92B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TARpe22ShopVaitmaa.Core", "TARpe22Shop.Core\TARpe22ShopVaitmaa.Core.csproj", "{DA70CE3E-3C02-47A7-8358-CC22D8AB46F1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TARpe22ShopVaitmaa.Core", "TARpe22Shop.Core\TARpe22ShopVaitmaa.Core.csproj", "{DA70CE3E-3C02-47A7-8358-CC22D8AB46F1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TARpe22ShopVaitmaa.ApplicationServices", "TARpe22Shop.ApplicationServices\TARpe22ShopVaitmaa.ApplicationServices.csproj", "{00CD0BA1-A324-4998-8D98-353BA240B875}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TARpe22ShopVaitmaa.ApplicationServices", "TARpe22Shop.ApplicationServices\TARpe22ShopVaitmaa.ApplicationServices.csproj", "{00CD0BA1-A324-4998-8D98-353BA240B875}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TARpe22ShopVaitmaa.SpaceshipTest", "TARpe22ShopVaitmaa.SpaceshipTest\TARpe22ShopVaitmaa.SpaceshipTest.csproj", "{BA171E48-CBC6-4850-BC33-680004DB0077}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{00CD0BA1-A324-4998-8D98-353BA240B875}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{00CD0BA1-A324-4998-8D98-353BA240B875}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{00CD0BA1-A324-4998-8D98-353BA240B875}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BA171E48-CBC6-4850-BC33-680004DB0077}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BA171E48-CBC6-4850-BC33-680004DB0077}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BA171E48-CBC6-4850-BC33-680004DB0077}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BA171E48-CBC6-4850-BC33-680004DB0077}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
