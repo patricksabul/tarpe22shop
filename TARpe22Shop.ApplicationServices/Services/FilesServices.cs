@@ -9,13 +9,14 @@ using TARpe22ShopVaitmaa.Core.Domain;
 using TARpe22ShopVaitmaa.Core.Dto;
 using TARpe22ShopVaitmaa.Core.ServiceInterface;
 using TARpe22ShopVaitmaa.Data;
+using Microsoft.Extensions.Hosting;
 
 namespace TARpe22ShopVaitmaa.ApplicationServices.Services
 {
     public class FilesServices : IFilesServices
     {
         private readonly TARpe22ShopVaitmaaContext _context;
-        private readonly IHostingEnvironment _webHost;
+        private readonly IHostEnvironment _webHost;
         public FilesServices(TARpe22ShopVaitmaaContext context, IHostingEnvironment webHost)
         {
             _context = context;

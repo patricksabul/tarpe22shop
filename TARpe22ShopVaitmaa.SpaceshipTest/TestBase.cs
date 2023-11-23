@@ -12,6 +12,7 @@ using TARpe22ShopVaitmaa.ApplicationServices.Services;
 using TARpe22ShopVaitmaa.Core.ServiceInterface;
 using TARpe22ShopVaitmaa.Data;
 using TARpe22ShopVaitmaa.SpaceshipTest.Macros;
+using TARpe22ShopVaitmaa.SpaceshipTest.Mock;
 
 namespace TARpe22ShopVaitmaa.SpaceshipTest
 {
@@ -41,7 +42,7 @@ namespace TARpe22ShopVaitmaa.SpaceshipTest
         {
             services.AddScoped<ISpaceshipsServices, SpaceshipsServices>();
             services.AddScoped<IFilesServices, FilesServices>();
-            services.AddScoped<IWebHost>();
+            services.AddScoped<IHostingEnvironment, MockIHostEnvironment>();
 
             services.AddDbContext<TARpe22ShopVaitmaaContext>(x =>
                 {
