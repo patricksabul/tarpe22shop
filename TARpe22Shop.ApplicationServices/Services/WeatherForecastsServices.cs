@@ -16,13 +16,13 @@ namespace TARpe22ShopVaitmaa.ApplicationServices.Services
             //City Name = "Tallinn, EE" Location = "EUR|EE|EN001|TALLINN" Country = "Estonia"
 
             string apikey = "UoJSCG3lbTnHIA9VEMQbeILRapsOWdQx";
-            var url = $"http://dataservice.accuweather.com/forecasts/v1/daily/1day/127964?UoJSCG3lbTnHIA9VEMQbeILRapsOWdQx&metric=true";
+            var url = $"http://dataservice.accuweather.com/forecasts/v1/daily/1day/127964?apikey=UoJSCG3lbTnHIA9VEMQbeILRapsOWdQx&metric=true";
 
             using (WebClient client = new WebClient())
             {
                 string json = client.DownloadString(url);
 
-                WeatherRootDto weatherInfo = (new JavaScriptSerializer()).Deserialize<WeatherRootDto>(json);
+                WeatherRootDto weatherInfo = new JavaScriptSerializer().Deserialize<WeatherRootDto>(json);
 
                 dto.EffectiveDate = weatherInfo.Headline.EffectiveDate;
                 dto.EffectiveEpochDate = weatherInfo.Headline.EffectiveEpochDate;
