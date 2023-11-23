@@ -1,7 +1,7 @@
-﻿using Microsoft.AspNetCore.Hosting;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Diagnostics;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -53,7 +53,7 @@ namespace TARpe22ShopVaitmaa.SpaceshipTest
             RegisterMacros(services);
         }
 
-        private void RegisterMacros(IServiceCollection services)
+        public void RegisterMacros(IServiceCollection services)
         {
             var macroBaseType = typeof(IMacros);
 
