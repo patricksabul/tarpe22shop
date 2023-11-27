@@ -1,14 +1,8 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using TARpe22ShopVaitmaa.Core.Domain;
 using TARpe22ShopVaitmaa.Core.Dto;
 using TARpe22ShopVaitmaa.Core.ServiceInterface;
 using TARpe22ShopVaitmaa.Data;
-using Microsoft.Extensions.Hosting;
 using IHostingEnvironment = Microsoft.Extensions.Hosting.IHostingEnvironment;
 
 namespace TARpe22ShopVaitmaa.ApplicationServices.Services
