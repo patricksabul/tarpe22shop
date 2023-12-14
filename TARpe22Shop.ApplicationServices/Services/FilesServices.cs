@@ -39,6 +39,28 @@ namespace TARpe22ShopVaitmaa.ApplicationServices.Services
                 }
             }
         }
+        public void UploadFilesToDatabase(CarDto dto, Car domain)
+        {
+            if (dto.Files != null && dto.Files.Count > 0)
+            {
+                foreach (var photo in dto.Files)
+                {
+                    using (var target = new MemoryStream())
+                    {
+                        FileToDatabase files = new FileToDatabase()
+                        {
+                            Id = Guid.NewGuid(),
+                            ImageTitle = photo.FileName,
+                            CarId = domain.Id,
+                        };
+                        photo.CopyTo(target);
+                        files.ImageData = target.ToArray();
+
+                        _context.FilesToDatabase.Add(files);
+                    }
+                }
+            }
+        }
         public async Task<FileToDatabase> RemoveImage(FileToDatabaseDto dto)
         {
             var image = await _context.FilesToDatabase
@@ -65,8 +87,8 @@ namespace TARpe22ShopVaitmaa.ApplicationServices.Services
             string uniqueFileName = null;
             if (dto.Files != null && dto.Files.Count > 0)
             {
-                if(!Directory.Exists(_webHost.ContentRootPath + "\\multipleFileUpload\\")) 
-                { 
+                if (!Directory.Exists(_webHost.ContentRootPath + "\\multipleFileUpload\\"))
+                {
                     Directory.CreateDirectory(_webHost.ContentRootPath + "\\multipleFileUpload\\");
                 }
                 foreach (var image in dto.Files)

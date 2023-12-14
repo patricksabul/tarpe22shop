@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Cors.Infrastructure;
 using Microsoft.EntityFrameworkCore;
 using TARpe22ShopVaitmaa.ApplicationServices.Services;
 using TARpe22ShopVaitmaa.Core.ServiceInterface;
@@ -10,6 +11,7 @@ builder.Services.AddControllersWithViews();
 
 builder.Services.AddDbContext<TARpe22ShopVaitmaaContext>(OptionsBuilderConfigurationExtensions => OptionsBuilderConfigurationExtensions.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 builder.Services.AddScoped<ISpaceshipsServices, SpaceshipsServices>();
+builder.Services.AddScoped<ICarsServices, CarsServices>();
 builder.Services.AddScoped<IFilesServices, FilesServices>();
 builder.Services.AddScoped<IRealEstatesServices, RealEstatesServices>();
 builder.Services.AddScoped<IWeatherForecastsServices, WeatherForecastsServices>();
@@ -35,5 +37,6 @@ app.UseAuthorization();
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
+
 
 app.Run();

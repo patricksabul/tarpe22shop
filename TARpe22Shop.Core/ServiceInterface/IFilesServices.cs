@@ -11,6 +11,8 @@ namespace TARpe22ShopVaitmaa.Core.ServiceInterface
     public interface IFilesServices
     {
         void UploadFilesToDatabase(SpaceshipDto dto, Spaceship domain);
+        void UploadFilesToDatabase(CarDto dto, Car domain);
+
         Task<FileToDatabase> RemoveImage(FileToDatabaseDto dto);
         Task<List<FileToDatabase>> RemoveImagesFromDatabase(FileToDatabaseDto[] dtos);
         void FilesToApi(RealEstateDto dto, RealEstate realEstate);
