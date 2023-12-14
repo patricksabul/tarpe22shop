@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using TARpe22ShopVaitmaa.ApplicationServices.Services;
 using TARpe22ShopVaitmaa.Core.Dto.WeatherDtos;
+using TARpe22ShopVaitmaa.Core.ServiceInterface;
 using TARpe22ShopVaitmaa.Models.Weather;
 
 namespace TARpe22ShopVaitmaa.Controllers
