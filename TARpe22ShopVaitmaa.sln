@@ -11,7 +11,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TARpe22ShopVaitmaa.Core", "
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TARpe22ShopVaitmaa.ApplicationServices", "TARpe22Shop.ApplicationServices\TARpe22ShopVaitmaa.ApplicationServices.csproj", "{00CD0BA1-A324-4998-8D98-353BA240B875}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TARpe22ShopVaitmaa.SpaceshipTest", "TARpe22ShopVaitmaa.SpaceshipTest\TARpe22ShopVaitmaa.SpaceshipTest.csproj", "{BA171E48-CBC6-4850-BC33-680004DB0077}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TARpe22ShopVaitmaa.SpaceshipTest", "TARpe22ShopVaitmaa.SpaceshipTest\TARpe22ShopVaitmaa.SpaceshipTest.csproj", "{BA171E48-CBC6-4850-BC33-680004DB0077}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

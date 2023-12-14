@@ -16,6 +16,26 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\opilane\Source\Repos\TARpe22ShopVaitmaaee\TARpe22ShopVaitmaa
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/opilane/Source/Repos/TARpe22ShopVaitmaaee/TARpe22ShopVaitmaa/Views/Cars/CreateUpdate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2Fyc1xDcmVhdGVVcGRhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/opilane/Source/Repos/TARpe22ShopVaitmaaee/TARpe22ShopVaitmaa/Views/Cars/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2Fyc1xEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/opilane/Source/Repos/TARpe22ShopVaitmaaee/TARpe22ShopVaitmaa/Views/Cars/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2Fyc1xEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/opilane/Source/Repos/TARpe22ShopVaitmaaee/TARpe22ShopVaitmaa/Views/Cars/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2Fyc1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/opilane/Source/Repos/TARpe22ShopVaitmaaee/TARpe22ShopVaitmaa/Views/Cars/_Images.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2Fyc1xfSW1hZ2VzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/opilane/Source/Repos/TARpe22ShopVaitmaaee/TARpe22ShopVaitmaa/Views/Email/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1haWxcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
